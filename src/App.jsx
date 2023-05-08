@@ -27,28 +27,48 @@ function App() {
 
 
   return (
+    
     <section className='container_app'>
-      <h1>Weather App</h1>
-      {weather ? (
-        <>
-          <section>
-            <h2>{weather.weather.main}</h2>
-            <p>{weather.weather.descrption}</p>
-            <p>{isCelsius 
-                  ? weather.temperature.celsius.toFixed(2) 
-                  : weather.temperature.farenheit.toFixed(2)}{" "}
-                  °{isCelsius ? "C" : "F"}
-            </p>
-            <div>
-              <img src={weather.weather.icon} alt={weather.weather.descrption} />
-            </div>
+        <header className='header_container'>
+          <h1>Weather App</h1>
+        </header>
+        <body className='main_container'>
+          
+       
+          {weather ? (
+            <>
+            
+              <section className='showData_container'>
+                <div className='dv_degrees_icon'>
+                  <p>{isCelsius 
+                        ? weather.temperature.celsius.toFixed(0) 
+                        : weather.temperature.farenheit.toFixed(0)}
+                        °{isCelsius ? "C" : "F"}
+                  </p>
+                  <img src={weather.weather.icon} alt={weather.weather.description} />
+                </div>    
+                <div className='dv_weather_main'>
+                  <h2>{weather.weather.main}</h2>
+                </div>
+                <div className='dv_country_description'>
+                  <p>{weather.city}, {weather.country}</p>
+                  <p>{weather.weather.description}</p>               
+                </div>
 
-            <p>{weather.city}, {weather.country}</p>
-          </section>
-          <button onClick={()=>setIsCelsius(!isCelsius)}>Change °{isCelsius ? "F" : "C"}</button>
-        </>
-        
-      ) : <p>Loading weather...</p>}
+                
+                
+              </section>
+              
+              <button className='btn_change_degrees' onClick={()=>setIsCelsius(!isCelsius)}>Change °{isCelsius ? "F" : "C"}</button>
+            </>
+            
+          ) : <p>Loading weather...</p>}
+
+            
+        </body>
+        <footer className='footer_container'>
+
+        </footer>
     </section>
   )
 }
