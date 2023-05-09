@@ -17,7 +17,7 @@
   background: radial-gradient(50% 50% at 50% 50%, #D5F3FF 0%, #51B4E8 100%);  
 }
 .container_app{
-  width: 100%;
+  width: 350px;
   height: 630px;
 
   display: flex;
