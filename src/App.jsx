@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { getCoordinates } from './services/getCoordinates'
 import { getCurrentWeather } from './services/getCurrentWeatherData';
+import cloudImg from './assets/vectorLoad.png';
 
 
 import './App.css'
@@ -32,12 +33,9 @@ function App() {
         <header className='header_container'>
           <h1>Weather App</h1>
         </header>
-        <body className='main_container'>
-          
-       
+        <main className='main_container'>
           {weather ? (
             <>
-            
               <section className='showData_container'>
                 <div className='dv_degrees_icon'>
                   <p>{isCelsius 
@@ -53,21 +51,28 @@ function App() {
                 <div className='dv_country_description'>
                   <p>{weather.city}, {weather.country}</p>
                   <p>{weather.weather.description}</p>               
-                </div>
-
-                
-                
+                </div> 
               </section>
-              
               <button className='btn_change_degrees' onClick={()=>setIsCelsius(!isCelsius)}>Change °{isCelsius ? "F" : "C"}</button>
             </>
-            
-          ) : <p>Loading weather...</p>}
+          ) : (
+            <section className='load_container'> 
+              <div>
+                <img src={cloudImg} alt="Img/loading"/>
+              </div>
+    
+              <div className='loading_bar'>
 
-            
-        </body>
+              </div>
+              <p className='loading_text'>Loading weather...</p>
+            </section>
+          )}
+        </main>
         <footer className='footer_container'>
-
+          <div className='createBy'>  
+            <p>Create By Jesús Rodriguez</p>
+            <i className="fa-regular fa-registered"></i>
+          </div>
         </footer>
     </section>
   )
