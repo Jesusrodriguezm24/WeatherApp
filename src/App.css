@@ -18,11 +18,14 @@
 }
 .container_app{
   width: 100%;
-  height: 600px;
+  height: 630px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .header_container{
   display: flex;
-  margin-bottom: 140px;
 }
 .header_container h1{
   font-style: normal;
@@ -34,146 +37,10 @@
 }
 .main_container{
   width: 100%;
+  height: 500px; 
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.showData_container{
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
-  
-  Width: 337px;
-  Height: 231px;
-
-  background: linear-gradient(89.52deg, #E6F2FF 0.45%, #D5F3FF 97.05%);
-  box-shadow: 0px 4.8546px 4.8546px rgba(0, 0, 0, 0.25);
-  border-radius: 26.7003px;
-  border-top-right-radius: 90%;
-}
-.dv_degrees_icon{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3.5rem;
-  margin-bottom: 30px;
-
-}
-
-.dv_degrees_icon p{
-  width: 124px;
-  height: 95px;
-
-  font-style: normal;
-  font-weight: 300;
-  font-size: 5rem;
-  line-height: 150px;
-  
-
-  color: #026EED ;
-}
-
-.dv_degrees_icon img{
-  width: 180px; 
-  height: 180; 
-
-}
-
-.dv_weather_main{
-  width: 100%;
-  margin-left: 2rem;
- 
-  color: #56A5F1; 
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.dv_country_description{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 75px;
-}
-.dv_country_description p:first-child{
-  font-size: 19px;
-  line-height: 23px;
-  font-weight: 600;
-
-  color: #026EED;
-}
-.dv_country_description p:last-child{
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 12px;
-
-  color: #026EED;
-}
-
-.btn_change_degrees{
-  width: 147px;
-  height: 32px;
-
-  background: #38A1D8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-
-  color: #FFFFFF;
-}
-.load_container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-}
-.loading_text{
-  font-style: normal;
-  font-weight: 600;
-  font-size: 19px;
-  line-height: 23px;
-
-  color: #FFFFFF;
-}
-.loading_bar{
-  width: 306px;
-  height: 20px;
-  
-  background: #FFFFFF;
-  border-radius:10px;
-}
-
-.footer_container{
-  width: 100%;
-  height: 145px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-.createBy{
-
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  gap: 10px;
-
-  min-height: 40px;
-  background-color: var(--light_red);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-
-  color: #FFFFFF;
 }

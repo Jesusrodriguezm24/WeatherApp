@@ -1,0 +1,22 @@
+.load_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .loading_text{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 23px;
+  
+    color: #FFFFFF;
+  }
+  .loading_bar{
+    width: 306px;
+    height: 20px;
+    
+    background: #FFFFFF;
+    border-radius:10px;
+  }

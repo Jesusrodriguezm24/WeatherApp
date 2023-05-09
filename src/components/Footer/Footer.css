@@ -1,0 +1,22 @@
+.footer_container{
+    width: 100%;
+      
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .createBy{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+  
+    min-height: 40px;
+    background-color: var(--light_red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  
+    color: #FFFFFF;
+  }
